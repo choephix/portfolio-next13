@@ -15,8 +15,8 @@ const GalleryBackgroundDiv = styled.div`
 
   transition: background 1.5s linear, filter 0.5s linear;
 
-  &:hover {
-    filter: blur(12px);
+  *:hover > & {
+    filter: blur(8px);
     transition: background 1.5s linear, filter 0.25s linear;
   }
 `;
@@ -34,10 +34,10 @@ export const GalleryBackground = () => {
   }, []);
 
   const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index + 1) % images.length), 3000);
-    return () => clearInterval(intervalId);
-  }, [images, index]);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => setIndex((index + 1) % images.length), 3000);
+  //   return () => clearInterval(intervalId);
+  // }, [images, index]);
 
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
