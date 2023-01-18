@@ -26,15 +26,17 @@ const GalleryBackgroundDiv = styled.div`
 `;
 
 export const GalleryBackground = (props: GalleryBackgroundProps) => {
+  const { images } = props;
+
   const [index, setIndex] = useState(0);
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => setIndex((index + 1) % images.length), 3000);
-  //   return () => clearInterval(intervalId);
-  // }, [images, index]);
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index + 1) % images.length), 3000);
+    return () => clearInterval(intervalId);
+  }, [images, index]);
 
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
-  const backgroundImageUrl = props.images[index];
+  const backgroundImageUrl = images[index];
 
   return <GalleryBackgroundDiv style={{ backgroundImage: `url(${backgroundImageUrl})` }} />;
 };

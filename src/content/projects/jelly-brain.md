@@ -3,7 +3,7 @@ name: Jelly Brain
 abstract: Casual Endless Jumper Game for iOS and Android
 short: Casual Endless Jumper Game for iOS and Android
 skills: Adobe AIR, Actionscript 3.0, Mobile Development, Play Store, Video Ads
-date: 
+date: 7/2015
 feature: true
 background:
   - "forest_landscape_nature_beautiful_and_two_mushrooms_inspired_by_warcraft_hearthstone_casual_game_2055653219.webp"
@@ -14,6 +14,23 @@ background:
   - "forest_landscape_nature_beautiful_inspired_by_warcraft_hearthstone_casual_game_3636165118.webp"
   - "forest_landscape_nature_beautiful_inspired_by_warcraft_hearthstone_casual_game_3818816736.webp"
   - "forest_landscape_nature_beautiful_inspired_by_warcraft_hearthstone_casual_game_554369460.webp"
+thumbs:
+  - JellyBrain0.mp4
+  - bigmage/jellybrain/2.jpg
+  - JellyBrain1.mp4
+  - bigmage/jellybrain/jb-27.jpg
+  - JellyBrain2.mp4
+  - bigmage/jellybrain/3.jpg
+extra:
+  - bigmage/Slider02.png
+  - bigmage/jellybrain/1.jpg
+  - bigmage/jellybrain/4.jpg
+  - bigmage/jellybrain/5.jpg
+  - bigmage/jellybrain/jb-10.jpg
+  - bigmage/jellybrain/jb-23.jpg
+  - bigmage/jellybrain/jb-24.jpg
+  - bigmage/jellybrain/jb-25.jpg
+  - bigmage/jellybrain/jb-26.jpg
 ---
 The Joshua tree is also called _izote de desierto_ (Spanish, "desert dagger").[\[6\]](https://en.m.wikipedia.org/wiki/Yucca_brevifolia#cite_note-ITIS-6) It was first formally described in the botanical literature as _Yucca brevifolia_ by [George Engelmann](https://en.m.wikipedia.org/wiki/George_Engelmann "George Engelmann") in 1871 as part of the Geological Exploration of the 100th meridian (or "[Wheeler Survey](https://en.m.wikipedia.org/wiki/Wheeler_Survey "Wheeler Survey")").[\[7\]](https://en.m.wikipedia.org/wiki/Yucca_brevifolia#cite_note-IPNI-7)
 

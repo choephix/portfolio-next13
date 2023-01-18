@@ -1,6 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 import Gallery from '../components/Gallery';
 import './index.css';
@@ -10,27 +11,44 @@ import './index.css';
  * @returns A React component.
  */
 export default function About(props: Awaited<ReturnType<typeof getStaticProps>>['props']) {
+  function calculateOrderPriority(a: any) {
+    return Date.parse('01/' + a.frontmatter.date);
+  }
+
+  props.projects.sort((a: any, b: any) => calculateOrderPriority(b) - calculateOrderPriority(a));
+
   return (
-    <div id='main'>
-      <h1>About</h1>
+    <div id='main' style={{ overflowX: 'hidden', padding: '64px 0' }}>
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{props.home?.content}</ReactMarkdown>
 
-      <ReactMarkdown disallowedElements={['a']}>{props.home?.content}</ReactMarkdown>
+      <br />
+      <br />
+      <br />
 
-      {props.projects.map((post: any, index: number) => {
-        const { frontmatter, content } = post;
-        return (
-          <div key={index}>
+      {props.projects
+        .filter(
+          prj =>
+            prj.frontmatter.background.length > 0 &&
+            prj.frontmatter.thumbs.length > 0 &&
+            prj.frontmatter.abstract
+        )
+        .map((post: any, index: number) => {
+          const { frontmatter, content } = post;
+          return (
             <Gallery
+              key={index}
               altname={frontmatter.name || ''}
               name={frontmatter.abstract || ''}
               description={frontmatter.short}
               backgroundImages={[]
                 .concat(frontmatter.background)
                 .map(filename => `/backdrops/${filename}`)}
+              thumbImages={[]
+                .concat(frontmatter.thumbs || [])
+                .map(filename => `/thumbs/${filename}`)}
             />
-          </div>
-        );
-      })}
+          );
+        })}
     </div>
   );
 }

@@ -5,7 +5,7 @@ short: |
   Music gallery and player app for vinyls, made with Flash IDE and Actionscript 3.0
   Features mp3 streaming, playlists, async image loading.
 skills: ActionScript 3.0, Flash IDE, Design
-date: 01/2012
+date: 03/2012
 feature: true
 background:
   - "music_gallery_vinyls_collection_discs_casual_game_2091760183.webp"
@@ -20,9 +20,9 @@ background:
   - "vynil_music_live_shop_people_discs_light_gray_bright_casual_game_654623831.webp"
   - "vynil_music_live_shop_people_discs_light_gray_bright_casual_game_997368298.webp"
 thumbs:
-  - ../julia-joppien.jpg
-  - ../julia-joppien.jpg
-  - ../julia-joppien.jpg
+  - independent/music/1.jpg
+  - independent/music/agora.profile.jpg
+  - smol/mgal.jpg
 ---
 **Juniperus scopulorum**, the Rocky Mountain juniper, is a species of juniper native to western North America, in Canada in British Columbia and southwest Alberta, in the United States from Washington east to North Dakota, south to Arizona and also locally western Texas, and northernmost Mexico from Sonora east to Coahuila. It grows at altitudes of 500–2,700 metres (1,600–8,900 ft) on dry soils, often together with other juniper species. "Scopulorum" means "of the mountains.
 

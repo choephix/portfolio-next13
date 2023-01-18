@@ -21,6 +21,9 @@ background:
   - "orange_rocks_in_the_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_3323516413.webp"
   - "orange_rocks_in_the_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_376232026.webp"
   - "orange_rocks_in_the_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_951573216.webp"
+thumbs:
+  - independent/sumobattle/sumo0.jpg
+  - independent/sumobattle/sumo1.jpg
 ---
 
 The term **bristlecone pine** covers three [species](https://en.wikipedia.org/wiki/Species 'Species') of [pine](https://en.wikipedia.org/wiki/Pine 'Pine') tree (family [Pinaceae](https://en.wikipedia.org/wiki/Pinaceae 'Pinaceae'), genus [_Pinus_](https://en.wikipedia.org/wiki/Pinus 'Pinus'), subsection _Balfourianae_). All three species are long-lived and highly resilient to harsh weather and bad soils. One of the three species, _Pinus longaeva_, is among the longest-lived life forms on Earth. The oldest _Pinus longaeva_ is more than 5,000 years old,[\[1\]](https://en.wikipedia.org/wiki/Bristlecone_pine#cite_note-oldest-1) making it the oldest known individual of any species.

@@ -4,10 +4,14 @@ abstract: Multiplayer party games on the web.
 short: |
   A collection of three party games on the web.
   Written in React + Typescript, utilizing Firebase Realtime Database for realtime multiplayer.
-skills: Typescript, React, Firebase, Firebase Firestore, Firebase Realtime Database, Firebase Functions, Figma
+skills: Lerna, Typescript, React, Firebase, Firebase Firestore, Firebase Realtime Database, Firebase Functions, Figma
 date: 07/2020
 feature: true
 background: []
+thumbs:
+  - ../julia-joppien.jpg
+  - ../julia-joppien.jpg
+  - ../julia-joppien.jpg
 ---
 The Joshua tree is also called _izote de desierto_ (Spanish, "desert dagger").[\[6\]](https://en.m.wikipedia.org/wiki/Yucca_brevifolia#cite_note-ITIS-6) It was first formally described in the botanical literature as _Yucca brevifolia_ by [George Engelmann](https://en.m.wikipedia.org/wiki/George_Engelmann "George Engelmann") in 1871 as part of the Geological Exploration of the 100th meridian (or "[Wheeler Survey](https://en.m.wikipedia.org/wiki/Wheeler_Survey "Wheeler Survey")").[\[7\]](https://en.m.wikipedia.org/wiki/Yucca_brevifolia#cite_note-IPNI-7)
 

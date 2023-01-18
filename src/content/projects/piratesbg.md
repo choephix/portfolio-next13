@@ -11,6 +11,26 @@ background:
   - "arhipelago_small_islands_and_dark_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_2065516636.webp"
   - "arhipelago_very_small_islands_and_dark_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_1308733375.webp"
   - "arhipelago_very_small_islands_and_dark_ocean_waves_inspired_by_warcraft_hearthstone_casual_game_588209326.webp"
+thumbs:
+  - bigmage/piratesarena/1.jpg
+  - bigmage/piratesarena/2.jpg
+  - bigmage/piratesarena/3.jpg
+  - bigmage/piratesarena/4.jpg
+  - bigmage/piratesarena/pirati_640.jpg
+  - bigmage/lucidstar/1.jpg
+  - bigmage/lucidstar/10.jpg
+  - bigmage/lucidstar/11.jpg
+  - bigmage/lucidstar/12.jpg
+  - bigmage/lucidstar/13.jpg
+  - bigmage/lucidstar/2.jpg
+  - bigmage/lucidstar/3.jpg
+  - bigmage/lucidstar/4.jpg
+  - bigmage/lucidstar/5.jpg
+  - bigmage/lucidstar/6.jpg
+  - bigmage/lucidstar/7.jpg
+  - bigmage/lucidstar/8.jpg
+  - bigmage/lucidstar/9.jpg
+  - bigmage/lucidstar/lucid_640.jpg
 ---
 Pseudotsuga menziesii is an evergreen conifer species in the pine family, Pinaceae. It is native to western North America and is known as Douglas fir,Douglas-fir,Oregon pine,and Columbian pine. There are two varieties: coast Douglas-fir (P. menziesii var. menziesii), and Rocky Mountain Douglas-fir (P. menziesii var. glauca).
 

@@ -11,6 +11,18 @@ background:
   - "amazon_aztec_jungle_and_river_inspired_by_warcraft_hearthstone_3711657078.webp"
   - "amazon_aztec_jungle_and_river_inspired_by_warcraft_hearthstone_4215736958.webp"
   - "amazon_aztec_jungle_and_river_inspired_by_warcraft_hearthstone_904056896.webp"
+thumbs:
+  - bigmage/jungletrouble/jungletrouble2_640.jpg
+  - JungleTrouble1.mp4
+  - bigmage/jungletrouble/3.jpg
+  - JungleTrouble2.mp4
+  - bigmage/jungletrouble/6.jpg
+extra:
+  - bigmage/jungletrouble/2.jpg
+  - bigmage/jungletrouble/5.jpg
+  - bigmage/jungletrouble/1.jpg
+  - bigmage/jungletrouble/7.jpg
+  - bigmage/jungletrouble/4.jpg
 ---
 **Juniperus scopulorum**, the Rocky Mountain juniper, is a species of juniper native to western North America, in Canada in British Columbia and southwest Alberta, in the United States from Washington east to North Dakota, south to Arizona and also locally western Texas, and northernmost Mexico from Sonora east to Coahuila. It grows at altitudes of 500–2,700 metres (1,600–8,900 ft) on dry soils, often together with other juniper species. "Scopulorum" means "of the mountains.
 

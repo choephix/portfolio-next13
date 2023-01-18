@@ -11,6 +11,18 @@ background:
   - "white_urban_city_buildings_and_bright_sky_and_industrial_cranes_inspired_by_warcraft_hearthstone_casual_game_453739232.webp"
   - "white_urban_city_buildings_and_bright_sky_and_industrial_cranes_inspired_by_warcraft_hearthstone_casual_game_63189152.webp"
   - "white_urban_city_buildings_and_bright_sky_and_industrial_cranes_inspired_by_warcraft_hearthstone_casual_game_729119324.webp"
+thumbs:
+  - StreetMobster1.mp4
+  - StreetMobster2.mp4  
+  - bigmage/bgmafia/1.jpg
+  - bigmage/bgmafia/2.jpg
+  - bigmage/bgmafia/3.jpg
+  - bigmage/bgmafia/4.jpg
+  - bigmage/bgmafia/5.jpg
+  - bigmage/bgmafia/6.jpg
+  - bigmage/bgmafia/7.jpg
+  - bigmage/bgmafia/8.jpg
+  - bigmage/bgmafia/9.jpg
 ---
 **Juniperus scopulorum**, the Rocky Mountain juniper, is a species of juniper native to western North America, in Canada in British Columbia and southwest Alberta, in the United States from Washington east to North Dakota, south to Arizona and also locally western Texas, and northernmost Mexico from Sonora east to Coahuila. It grows at altitudes of 500–2,700 metres (1,600–8,900 ft) on dry soils, often together with other juniper species. "Scopulorum" means "of the mountains.
 

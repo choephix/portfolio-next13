@@ -15,6 +15,10 @@ background:
   - "night_time_billiards_club_dim_light_digital_fine_art_casual_game_4015559387.webp"
   - "night_time_billiards_club_dim_light_digital_fine_art_casual_game_581764122.webp"
   - "billiards_club_inspired_by_gta_cover_art_casual_game (1)_2183929294.webp"
+thumbs:
+  - bigmage/hasht/hasht-1.jpg
+  - bigmage/hasht/hasht-2.jpg
+  - bigmage/hasht/hasht-3.jpg
 ---
 
 **Juniperus scopulorum**, the Rocky Mountain juniper, is a species of juniper native to western North America, in Canada in British Columbia and southwest Alberta, in the United States from Washington east to North Dakota, south to Arizona and also locally western Texas, and northernmost Mexico from Sonora east to Coahuila. It grows at altitudes of 500–2,700 metres (1,600–8,900 ft) on dry soils, often together with other juniper species. "Scopulorum" means "of the mountains.

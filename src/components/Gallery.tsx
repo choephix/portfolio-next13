@@ -9,28 +9,40 @@ export type GalleryProps = {
   altname: string;
   description: string;
   backgroundImages: string[];
-  // thumbImages: string[];
+  thumbImages: string[];
 };
 
 const GalleryTitleDiv = styled.h1`
-  font-size: 48px;
+  font-size: 30px;
   font-weight: bolder;
   margin: 0px;
-  padding: 0px;
+  padding: 0px 24px;
 
   color: #fff;
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 1px black;
 `;
 
 const GalleryDescrDiv = styled(ReactMarkdown)`
   font-size: 16px;
   font-weight: bolder;
-  margin: 0px;
+
+  margin: 20px 0px;
   padding: 1px 12px;
+
+  width: 60%;
 
   color: #fff;
   -webkit-text-stroke: 0.5px black;
   background: #0007;
+
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.3s linear, transform 0.3s linear;
+  *:hover > * > & {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 0.2s linear, transform 0.2s linear;
+  }
 `;
 
 /* A React component that is using the useState and useEffect hooks to create a gallery of images that
@@ -49,17 +61,15 @@ export const Gallery = (props: GalleryProps) => {
 
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
-  const [images, setImages] = useState<string[]>([]);
-  useEffect(() => {
-    const imgs = [
+  if (props.thumbImages.length < 1) {
+    props.thumbImages.push(
       `https://picsum.photos/seed/${Math.random()}/400/300`,
       `https://picsum.photos/seed/${Math.random()}/200/300`,
       `https://picsum.photos/seed/${Math.random()}/400/300`,
       `https://picsum.photos/seed/${Math.random()}/400/300`,
-      `https://picsum.photos/seed/${Math.random()}/500/300`,
-    ];
-    setImages(imgs);
-  }, []);
+      `https://picsum.photos/seed/${Math.random()}/500/300`
+    );
+  }
 
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
@@ -77,12 +87,12 @@ export const Gallery = (props: GalleryProps) => {
     >
       <GalleryBackground images={props.backgroundImages} />
 
-      <div style={{ position: 'absolute', top: '0px', left: '0px' }}>
+      <GalleryThumbsSlider images={props.thumbImages} />
+
+      <div style={{ position: 'absolute', top: '0px', left: '0%', right: '0' }}>
         <GalleryTitleDiv>{props.name}</GalleryTitleDiv>
         {props.description && <GalleryDescrDiv>{props.description}</GalleryDescrDiv>}
       </div>
-
-      <GalleryThumbsSlider images={images} />
     </div>
   );
 };
