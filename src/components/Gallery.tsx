@@ -89,7 +89,7 @@ export const Gallery = (props: GalleryProps) => {
     >
       <GalleryBackground images={props.backgroundImages} />
 
-      <GalleryThumbsSlider
+      {/* <GalleryThumbsSlider
         images={props.thumbImagesExtra}
         scrollSpeed={0.5}
         style={{
@@ -98,7 +98,7 @@ export const Gallery = (props: GalleryProps) => {
           left: '0px',
           right: '0px',
         }}
-      />
+      /> */}
 
       <GalleryThumbsSlider
         images={props.thumbImages}
