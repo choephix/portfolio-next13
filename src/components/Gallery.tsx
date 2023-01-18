@@ -27,14 +27,15 @@ const GalleryDescrDiv = styled(ReactMarkdown)`
   font-size: 16px;
   font-weight: bolder;
 
-  margin: 20px 0px;
+  margin: 20px 20px;
   padding: 1px 12px;
 
-  width: 60%;
+  max-width: 60%;
 
   color: #fff;
   -webkit-text-stroke: 0.5px black;
-  background: #0007;
+  background: #000A;
+  border-radius: 8px;
 
   opacity: 0;
   transform: translateX(-24px);
