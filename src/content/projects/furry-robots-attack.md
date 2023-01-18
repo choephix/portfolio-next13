@@ -12,12 +12,12 @@ background:
   - "strategy_many_robots_drones_falling_and_crystal_orbs_flying_and_explosions_and_yellow_background_and_godrays_inspired_by_warcraft_hearthstone_rts_casual_game_3889103449.webp"
 thumbs:
   - fra1.mp4
-  - fra2b-hevc.mp4
-  - fra6.mp4
-  - independent/fra/fra200x200bot.jpg
   - fra3.mp4
-  - fra7-hevc.mp4
+  - fra6.mp4
   - independent/fra/fra200x200p.jpg
+  - fra2b-hevc.mp4
+  - fra7-hevc.mp4
+  - independent/fra/fra200x200bot.jpg
   - fra5-hevc.mp4
 extra:
   - smol/fra.jpg
