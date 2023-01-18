@@ -1,6 +1,7 @@
 import { LiveValue } from '@/debug/LiveValue';
 import { duplicateArray } from '@/utils/duplicateArray';
 import { useRequestAnimationFrame } from '@/utils/useRequestAnimationFrame';
+import { useWatchReturnValue } from '@/utils/useWatchReturnValue';
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
@@ -16,11 +17,12 @@ const ThumbStrip = styled.div`
 `;
 
 const Thumb = styled.img`
+  border-radius: 12px;
+  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.75), inset 0 0 24px 0px rgba(0, 0, 0, 0.75);
+  margin: 24px;
+  pverflow: hidden;
   height: 160px;
   width: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.3);
-  margin: 24px;
 `;
 
 type GalleryThumbsSliderProps = {
@@ -46,6 +48,13 @@ export function GalleryThumbsSlider(props: GalleryThumbsSliderProps) {
     const speed = 0.1 * scrollSpeed;
     refStrip.current.scrollLeft = (now * speed) % maxScroll;
   });
+
+  /** 
+   * Ensure the component re-renders when the size of the thumbs strip changes. 
+   * This can happen when new images are loaded after initial render, 
+   * and without it the scrollWidth used above will be incorrect.
+   **/
+  useWatchReturnValue(() => String(refStrip.current?.scrollWidth));
 
   return (
     <div

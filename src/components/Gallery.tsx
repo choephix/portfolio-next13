@@ -1,10 +1,41 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import styled from 'styled-components';
 import { GalleryBackground } from './GalleryBackground';
 import { GalleryThumbsSlider } from './GalleryThumbsSlider';
 
+export type GalleryProps = {
+  name: string;
+  altname: string;
+  description: string;
+  backgroundImages: string[];
+  // thumbImages: string[];
+};
+
+const GalleryTitleDiv = styled.h1`
+  font-size: 48px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 0px;
+
+  color: #fff;
+  -webkit-text-stroke: 2px black;
+`;
+
+const GalleryDescrDiv = styled(ReactMarkdown)`
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 1px 12px;
+
+  color: #fff;
+  -webkit-text-stroke: 0.5px black;
+  background: #0007;
+`;
+
 /* A React component that is using the useState and useEffect hooks to create a gallery of images that
 will scroll through the images every 3 seconds. */
-const Gallery = () => {
+export const Gallery = (props: GalleryProps) => {
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
   const ref = useRef<any>(null);
@@ -40,10 +71,17 @@ const Gallery = () => {
         width: '100%',
         height: '400px',
         position: 'relative',
-        background: 'skyblue',
+        // background: 'skyblue',
       }}
+      title={props.altname}
     >
-      <GalleryBackground />
+      <GalleryBackground images={props.backgroundImages} />
+
+      <div style={{ position: 'absolute', top: '0px', left: '0px' }}>
+        <GalleryTitleDiv>{props.name}</GalleryTitleDiv>
+        {props.description && <GalleryDescrDiv>{props.description}</GalleryDescrDiv>}
+      </div>
+
       <GalleryThumbsSlider images={images} />
     </div>
   );

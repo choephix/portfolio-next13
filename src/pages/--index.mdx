@@ -1,0 +1,111 @@
+import './index.css';
+import { ProjectGalleries } from '../components/ProjectGalleries';
+
+import matter from "gray-matter"
+
+<div id="main">
+  ## Hey there, I'm Stefan
+
+  I am a full-stack **web developer** by day and **game developer** by night, bringing a unique perspective and versatility to every project I work on. With over 13 years of experience in the industry, I have honed my skills and the ability to quickly adapt to new technologies and deliver professional quality products.
+  I am a stickler for good user experience and I strive to create beautiful, functional, and high-performance products.
+
+  Take a look at my work, and if you have any questions or would like to discuss a project, <a href="mailto:stefan&#x40;revoltage&#x2E;io">don't hesitate to reach out</a>. I'm always happy to chat. Thanks for visiting my portfolio!
+
+  <ProjectGalleries />
+
+  ## Skills
+
+  - TypeScript
+  - React
+  - Express.js
+  - PixiJS
+  - Three.js
+  - APIs
+  - Web3
+
+  ## Tools and platforms I use
+
+  - VS Code
+  - Docker
+  - Git
+  - Firebase
+  - Webpack
+  - Adobe Photoshop
+
+  ## Experience
+
+  - **Freelance Web/Game Developer** (2020-present)
+  - **Lead Game Developer** at 7 Mojos and OSO Interactive (2020-2022)
+  - **Software Developer** at Blockchain Solutions (2018-2020)
+  - **Game Developer** at Big Mage Studio (2012-2020)
+  - **Freelance Web/Game Developer** (2009-2012)
+
+  ## Projects
+
+  ### 3D visualization tool for online races.
+
+  A dashboard for inspecting scene and telemetry data from popular online racing game.
+  Typescript, React, MUI, Threejs, Recharts, Sentry, Jira, Node.js, AWS, Figma
+
+  ### NFT game about trains on the blockchain.
+
+  PixiJS, GSAP, Shaders, TypeScript, NFTs, EOSIO/WAX, Firebase, Airtable, Sentry, WebGL, Webpack, Serverless, D3.js, Ethers.js, Web3.js
+
+  ### Slot games SDK for online casino.
+
+  The first game, as well as oroject structure, SDK, and tools for the asset pipeline of a company's new slot games portfolio.
+  Node.js, TypeScript, PixiJS, Howler.js, GSAP, Gulp, Electron
+
+  ### Multiplayer party games on the web.
+
+  Typescript, Lerna, React, Firebase Realtime Database, Figma
+
+  ---
+
+  <div>
+    
+    [Linkedin Profile](https://linkedin.com/in/choephix)
+    
+    [Toptal résumé](https://www.toptal.com/resume/stefan-ginev)
+    
+    [GitHub](https://github.com/choephix)
+    
+    <a href="mailto:stefan&#x40;revoltage&#x2E;io">stefan&#x40;revoltage&#x2E;io</a>
+
+  </div>
+</div>
+
+
+export async function getStaticProps() {
+  // getting the website config
+  // const siteConfig = await import(`../data/config.json`);
+
+  /** Get the contents of all posts from "../content/posts" */
+  const postFiles = fs.readdirSync(`${process.cwd()}/src/content/posts`, 'utf-8');
+  const posts = postFiles.map(filename => {
+    const markdownWithMetadata = fs.readFileSync(
+      `${process.cwd()}/src/content/posts/${filename}`,
+      'utf-8'
+    );
+    const { data: frontmatter, content } = matter(markdownWithMetadata);
+    return {
+      frontmatter,
+      content,
+    };
+  });
+
+  console.log(
+    `
+    posts: ${JSON.stringify(posts, null, 2)}
+
+    `
+  );
+
+  return {
+    props: {
+      posts: posts,
+      // title: siteConfig.default.title,
+      // description: siteConfig.default.description,
+    },
+  };
+}

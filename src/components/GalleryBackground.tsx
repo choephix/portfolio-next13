@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
+export type GalleryBackgroundProps = {
+  images: string[];
+};
+
 const GalleryBackgroundDiv = styled.div`
   position: absolute;
   top: 0;
@@ -16,23 +20,12 @@ const GalleryBackgroundDiv = styled.div`
   transition: background 1.5s linear, filter 0.5s linear;
 
   *:hover > & {
-    filter: blur(8px);
+    filter: blur(6px);
     transition: background 1.5s linear, filter 0.25s linear;
   }
 `;
 
-export const GalleryBackground = () => {
-  const [images, setImages] = useState<string[]>([]);
-  useEffect(() => {
-    setImages([
-      `https://picsum.photos/seed/${Math.random()}/1024/512`,
-      `https://picsum.photos/seed/${Math.random()}/1024/512`,
-      `https://picsum.photos/seed/${Math.random()}/1024/512`,
-      `https://picsum.photos/seed/${Math.random()}/1024/512`,
-      `https://picsum.photos/seed/${Math.random()}/1024/512`,
-    ]);
-  }, []);
-
+export const GalleryBackground = (props: GalleryBackgroundProps) => {
   const [index, setIndex] = useState(0);
   // useEffect(() => {
   //   const intervalId = setInterval(() => setIndex((index + 1) % images.length), 3000);
@@ -41,5 +34,7 @@ export const GalleryBackground = () => {
 
   //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////  //////
 
-  return <GalleryBackgroundDiv style={{ backgroundImage: `url(${images[index]})` }} />;
+  const backgroundImageUrl = props.images[index];
+
+  return <GalleryBackgroundDiv style={{ backgroundImage: `url(${backgroundImageUrl})` }} />;
 };
