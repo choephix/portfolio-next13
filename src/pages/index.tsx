@@ -46,6 +46,9 @@ export default function About(props: Awaited<ReturnType<typeof getStaticProps>>[
               thumbImages={[]
                 .concat(frontmatter.thumbs || [])
                 .map(filename => `/thumbs/${filename}`)}
+              thumbImagesExtra={[]
+                .concat(frontmatter.extra || frontmatter.thumbs || [])
+                .map(filename => `/thumbs/${filename}`)}
             />
           );
         })}

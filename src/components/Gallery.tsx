@@ -10,10 +10,11 @@ export type GalleryProps = {
   description: string;
   backgroundImages: string[];
   thumbImages: string[];
+  thumbImagesExtra: string[];
 };
 
 const GalleryTitleDiv = styled.h1`
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bolder;
   margin: 0px;
   padding: 0px 24px;
@@ -87,7 +88,26 @@ export const Gallery = (props: GalleryProps) => {
     >
       <GalleryBackground images={props.backgroundImages} />
 
-      <GalleryThumbsSlider images={props.thumbImages} />
+      <GalleryThumbsSlider
+        images={props.thumbImagesExtra}
+        scrollSpeed={0.5}
+        style={{
+          position: 'absolute',
+          bottom: '100px',
+          left: '0px',
+          right: '0px',
+        }}
+      />
+
+      <GalleryThumbsSlider
+        images={props.thumbImages}
+        style={{
+          position: 'absolute',
+          bottom: '0px',
+          left: '0px',
+          right: '0px',
+        }}
+      />
 
       <div style={{ position: 'absolute', top: '0px', left: '0%', right: '0' }}>
         <GalleryTitleDiv>{props.name}</GalleryTitleDiv>

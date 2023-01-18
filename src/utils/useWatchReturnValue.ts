@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useWatchReturnValue<T>(getValue: () => T) {
+export function useWatchReturnValue<T>(getValue: () => T, dependencies: any[] = []) {
   const [value, setValue] = useState(getValue);
   useEffect(() => {
     function loop() {
@@ -12,6 +12,6 @@ export function useWatchReturnValue<T>(getValue: () => T) {
     }
     let handle = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(handle);
-  }, [getValue]);
+  }, [getValue, ...dependencies]);
   return value;
 }

@@ -3,7 +3,7 @@ name: SimWin RDS Dashboard
 abstract: 3D visualization tool for online races
 short: A dashboard for inspecting scene and telemetry data from popular online racing game
 skills: Typescript, React, MUI, Threejs, Recharts, Sentry, Jira, Node.js, AWS, Figma
-date: '09/2023'
+date: '09/2022'
 feature: true
 background: []
 thumbs:

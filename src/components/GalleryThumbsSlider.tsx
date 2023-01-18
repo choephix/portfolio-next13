@@ -2,54 +2,28 @@ import { LiveValue } from '@/debug/LiveValue';
 import { duplicateArray } from '@/utils/duplicateArray';
 import { useRequestAnimationFrame } from '@/utils/useRequestAnimationFrame';
 import { useWatchReturnValue } from '@/utils/useWatchReturnValue';
-import { useEffect, useRef, useState } from 'react';
+import { HTMLAttributes, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { GalleryThumb } from './GalleryThumb';
 
 const ThumbStrip = styled.div`
   display: flex;
   width: 100%;
   margin: 8px 0px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-const ThumbP = styled.picture`
-  border-radius: 12px;
-  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.75), inset 0 0 24px 0px rgba(0, 0, 0, 0.75);
-  margin: 24px;
-  pverflow: hidden;
-  height: 160px;
-  width: auto;
-`;
-
-const Thumb = styled.img`
-  border-radius: 12px;
-  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.75), inset 0 0 24px 0px rgba(0, 0, 0, 0.75);
-  margin: 24px;
-  pverflow: hidden;
-  height: 160px;
-  width: auto;
-`;
-
-const ThumbVideo = styled.video`
-  border-radius: 12px;
-  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.75), inset 0 0 24px 0px rgba(0, 0, 0, 0.75);
-  margin: 24px;
-  pverflow: hidden;
-  height: 160px;
-  width: auto;
-`;
-
-type GalleryThumbsSliderProps = {
+type GalleryThumbsSliderProps = HTMLAttributes<any> & {
   images: string[];
   scrollSpeed?: number;
 };
 
 export function GalleryThumbsSlider(props: GalleryThumbsSliderProps) {
-  const { images: originalImages, scrollSpeed = 1 } = props;
+  const { images: originalImages, scrollSpeed = 1, ...divAttr } = props;
 
   const refStrip = useRef<HTMLDivElement>(null);
   const refView = useRef<HTMLDivElement>(null);
@@ -75,31 +49,11 @@ export function GalleryThumbsSlider(props: GalleryThumbsSliderProps) {
   useWatchReturnValue(() => String(refStrip.current?.scrollWidth));
 
   return (
-    <div
-      ref={refView}
-      className='image-list'
-      style={{
-        position: 'absolute',
-        bottom: '0px',
-        left: '0px',
-        right: '0px',
-        // overflow: 'hidden',
-      }}
-    >
+    <div ref={refView} className='image-list' {...divAttr}>
       <ThumbStrip ref={refStrip}>
-        {images.map((image, index) => {
-          return image.endsWith('.mp4') ? (
-            <ThumbVideo muted autoPlay loop>
-              <source src={image} type='video/mp4' />
-            </ThumbVideo>
-          ) : image.endsWith('.webm') ? (
-            <ThumbVideo muted autoPlay loop>
-              <source src={image} type='video/webm' />
-            </ThumbVideo>
-          ) : (
-            <Thumb key={index} src={image} alt={`image${index}`} style={{}} />
-          );
-        })}
+        {images.map((image, index) => (
+          <GalleryThumb src={image} key={index} />
+        ))}
       </ThumbStrip>
     </div>
   );
