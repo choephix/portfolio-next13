@@ -10,7 +10,7 @@ import './index.css';
  * It returns a div with a title attribute and a Gallery component
  * @returns A React component.
  */
-export default function About(props: Awaited<ReturnType<typeof getStaticProps>>['props']) {
+export default function Index(props: Awaited<ReturnType<typeof getStaticProps>>['props']) {
   function calculateOrderPriority(a: any) {
     return Date.parse('01/' + a.frontmatter.date);
   }
